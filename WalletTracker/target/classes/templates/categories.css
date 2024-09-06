@@ -1,0 +1,143 @@
+/* transactions.css */
+
+/* General Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Category List */
+#categoryList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#categoryList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+#categoryList li:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/* Buttons */
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:focus {
+    outline: none;
+}
+
+#categoryList button {
+    margin-left: 10px;
+}
+
+button[type="submit"], button[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Form Inputs */
+input[type="text"], select {
+    padding: 8px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
+select {
+    width: 20%;
+}
+
+/* Add Category Button */
+button[onclick="addCategory()"] {
+    background-color: #2196F3;
+    color: white;
+    margin-top: 10px;
+}
+
+button[onclick="addCategory()"]:hover {
+    background-color: #0b7dda;
+}
+
+/* Modal for Update Category */
+#updateCategoryModal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#updateCategoryModal h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#updateCategoryModal label {
+    margin: 10px 0;
+    display: inline-block;
+}
+
+#updateCategoryModal input[type="text"], #updateCategoryModal select {
+    width: calc(100% - 16px);
+}
+
+#updateCategoryModal button[type="submit"], #updateCategoryModal button[type="button"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#updateCategoryModal button[type="button"] {
+    background-color: #f44336;
+}
+
+#updateCategoryModal button[type="button"]:hover {
+    background-color: #da190b;
+}
+
+/* Hide the modal initially */
+#updateCategoryModal[style*="display:none;"] {
+    display: none !important;
+}
